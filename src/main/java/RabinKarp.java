@@ -47,7 +47,9 @@ public class RabinKarp {
 
     public int search(String txt) {
         int n = txt.length();
-        if (n < m) return n;
+        if (n < m){
+            return -1;
+        }
         long txtHash = hash(txt, m);
 
         if ((patHash == txtHash) && check(txt, 0))
